@@ -37,6 +37,8 @@ usuario = input("digite valores separados por virgula").split(",")
 lista = [int(x) for x in usuario]
 filtrar_primos(lista)
             
+            
+# meio que vacilei um pouco na atividade, acho que talvez ou provavelmente faltou um pouco de atenção na lógica.
         
     
 

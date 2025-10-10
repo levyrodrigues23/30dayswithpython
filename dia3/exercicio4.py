@@ -14,3 +14,39 @@
 # print(mesclar_dicionarios(dict1, dict2))
 #
 # A saída esperada seria: {'a': 100, 'b': 250, 'c': 400, 'd': 400}
+
+novo_dicionario = {}
+
+
+def mesclar_dicionarios(dicionario1, dicionario2):
+        for chave, valor in dicionario1.items():
+            novo_dicionario[chave] = valor
+            
+        for chave, valor in dicionario2.items():
+            if chave in novo_dicionario:
+                novo_dicionario[chave] += valor
+            else:
+                novo_dicionario[chave] = valor 
+            
+            
+        return novo_dicionario
+    
+    
+dict1 = {'a': 100, 'b': 200, 'c': 300}
+dict2 = {'b': 50, 'c': 100, 'd': 400}
+print(mesclar_dicionarios(dict1, dict2))
+
+    
+    
+    
+    
+    
+    
+   
+
+
+dict1 = {'a': 100, 'b': 200, 'c': 300}
+dict2 = {'b': 50, 'c': 100, 'd': 400}
+print(mesclar_dicionarios(dict1, dict2))
+
+# tive um pouco de dificuldade porque fazia bastante tempo que não mexia diretamente com isso

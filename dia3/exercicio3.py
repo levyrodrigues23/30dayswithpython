@@ -18,3 +18,57 @@
 # print(gerar_fibonacci(10))
 #
 # A saída esperada seria: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+lista_fibonacii = [0, 1]
+
+
+
+""" def gerar_fibonacci(num: int):
+    if num == 0:
+        return []
+    elif num == 1:
+        return [0]
+        
+    for i in range(num):
+        soma_valores = lista_fibonacii[i] + lista_fibonacii[i + 1]
+        lista_fibonacii.append(soma_valores)
+    
+    return lista_fibonacii
+    
+    
+print(gerar_fibonacci(100)) """
+
+def gerar_fibonacci(n):
+    # Trata os casos especiais primeiro
+    if n <= 0:
+        return []
+    if n == 1:
+        return [0]
+
+    # Inicia a lista DENTRO da função para que seja sempre nova
+    resultado = [0, 1]
+
+    
+    while len(resultado) < n:
+        proximo = resultado[-1] + resultado[-2]
+        resultado.append(proximo)       
+        
+        
+    return resultado 
+    
+    
+# COMOOOOOOOOOOOOOOO EU CONSEGUIIIIIIIIII, QUE INCRIVEL, EU NÃO SEI COMO MAS EU CONSEGUI, MOLEZAA
+# deu bom, mas parece ter complexidade n + 2, que droga
+
+
+
+
+
+
+
+try:
+    numero_usuario = int(input("Quantos termos da sequência de Fibonacci você quer gerar? "))
+    sequencia = gerar_fibonacci(numero_usuario)
+    print(sequencia)
+except ValueError:
+    print("Por favor, digite um número inteiro válido.")
