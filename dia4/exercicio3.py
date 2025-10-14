@@ -12,3 +12,20 @@
 # print(inverter_dicionario(d_original))
 #
 # A saída esperada seria: {1: 'a', 2: 'b', 3: 'c'}
+
+def inverter_dicionario(dicionario):
+    novo_dicionario = {}
+    
+    for chave, valor in dicionario.items():
+        novo_dicionario[valor] = chave
+        
+    return novo_dicionario
+        
+    
+    
+    
+d_original = {'a': 1, 'b': 2, 'c': 3}
+print(inverter_dicionario(d_original))
+        
+# achei relativamente tranquila, medo de quando o negocio começar a dificultar
+    

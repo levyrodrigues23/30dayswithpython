@@ -8,3 +8,20 @@
 # Exemplo de uso:
 # print(soma_digitos(1234))  # Deve retornar 10 (1+2+3+4)
 # print(soma_digitos(987))   # Deve retornar 24 (9+8+7)
+
+
+def soma_digitos(numero):
+    soma = 0
+    lista_pedaco = str(numero)
+
+    for i in lista_pedaco:
+        
+        soma += int(i)
+        
+    return soma
+        
+        
+        
+print(soma_digitos(1234))
+
+# trivial, essa é passada no concurso da prefeitura 

@@ -13,3 +13,18 @@
 # print(filtrar_por_letra(lista_de_frutas, 'a'))
 #
 # A saída esperada seria: ['Abacate', 'Amora']
+
+def filtrar_por_letra(strings, letra):
+    
+    filtro = [palavra for palavra in strings if palavra[0].lower() == letra.lower()]
+    return filtro
+        
+    
+
+
+
+lista_de_frutas = ["Abacate", "Banana", "Maçã", "Amora", "Melancia"]
+print(filtrar_por_letra(lista_de_frutas, 'a'))
+
+
+# trivial, so quase vacilo por simplismente não lembrar do lower lol

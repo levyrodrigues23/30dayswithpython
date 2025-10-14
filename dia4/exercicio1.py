@@ -7,7 +7,25 @@
 #
 # Exemplo de uso:
 # print(contar_vogais("Ola, Mundo!"))  # Deve retornar 4
-# print(contar_vogais("Python e Incrivel")) # Deve retornar 6
+# print(contar_vogais("Python e Incrivel")) # Deve retornar 5
 
 
+def contar_vogais(texto):
+    vogais = []
+    lista_vogais = list(texto)
+    for i in lista_vogais:
+        if i.lower() == "a" or i.lower() == "e" or i.lower() == "i" or i.lower() == "o" or i.lower() == "u":
+            vogais.append(i)
+            
+            
+            
+    return len(vogais)
+        
+    
+    
 
+    
+print(contar_vogais("Ola, Mundo!"))  
+print(contar_vogais("Python e Incrivel"))
+
+# trivial
