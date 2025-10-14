@@ -32,3 +32,42 @@
 #     - Se não encontrar, mostre uma mensagem "Contato não encontrado.".
 #
 # Dica: Estruture seu código com uma lista principal `contatos = []` e um laço `while` que controla o menu e chama as funções apropriadas.
+
+def menu():
+    dicionario_contatos = {}
+    
+    while True:
+        opcao = input("digite a sua escolha: adicionar contato(a), listar contatos(b), buscar contatos(c), sair(d)")
+        
+        match opcao:
+            case "a":
+                def adicionar_contatos(contatos):
+                    nome = input("digite o nome do novo contato: ")
+                    telefone = input("digite o telefone do novo contato: ")
+                    email = input("digite o email do novo contato: ")
+                    
+                    dicionario_contatos["nome"] = nome
+                    dicionario_contatos["telefone"] = telefone
+                    dicionario_contatos["email"] = email
+                    
+                    
+                    
+            case "b":
+                def listar_contatos(contatos):
+                    if contatos <= 0:
+                        return print("nenhum contato cadastrado")
+                    for nome, telefone, email in dicionario_contatos.items():
+                        return nome, telefone, email
+                        
+                
+            case "c":
+                def buscar_contato(contatos):
+                    contato_especifico = input("digite o contato que voce deseja buscar: ")
+                    
+            case "d":
+                
+           
+            
+                    
+                        
+        
