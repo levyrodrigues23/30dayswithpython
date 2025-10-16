@@ -33,41 +33,89 @@
 #
 # Dica: Estruture seu código com uma lista principal `contatos = []` e um laço `while` que controla o menu e chama as funções apropriadas.
 
+# --- Funções Auxiliares ---
+# Definimos todas as funções aqui, fora do menu.
+contatos = []
+
+
+
+def adicionar_contato():
+    nome = input("digite o nome do contato que deseja adicionar: ")
+    telefone = input("digite o telefone do contato: ")
+    email = input("digite o email do contato: ")
+    dicionario_contatos = {"nome": nome, "telefone": telefone, "email": email}
+    contatos.append(dicionario_contatos)
+    return print(f"{nome} foi adicionado com sucesso!")
+    
+    
+def listar_contatos():
+    if not contatos:
+        print("nenhum contato cadastrado")
+    else:
+        for contato in contatos:
+            print(f"contato: {contato["nome"]}, telefone: {contato["telefone"]}, email: {contato["email"]}")
+            
+        
+        
+    
+def buscar_contatos():
+    nome_buscar = input("digite o nome do contato que voce quer pesquisar: ")
+    encontrados = False
+    
+    for contato in contatos:
+        if nome_buscar.lower() in contato["nome"].lower():
+            print(f"nome: {contato["nome"]}, telefone: {contato["telefone"]}, email: {contato["email"]}")
+            encontrados = True
+            
+    if not encontrados:
+        print("contato não foi localizado!")
+            
+        
+        
+
+    
+
+
+
+
+
 def menu():
-    dicionario_contatos = {}
     
     while True:
-        opcao = input("digite a sua escolha: adicionar contato(a), listar contatos(b), buscar contatos(c), sair(d)")
+        print("--- console para gerenciar uma lista de contatos ---")
+        print("1. adicionar contatos")
+        print("2. listar contatos")
+        print("3. buscar contatos")
+        print("4. sair")
         
-        match opcao:
-            case "a":
-                def adicionar_contatos(contatos):
-                    nome = input("digite o nome do novo contato: ")
-                    telefone = input("digite o telefone do novo contato: ")
-                    email = input("digite o email do novo contato: ")
-                    
-                    dicionario_contatos["nome"] = nome
-                    dicionario_contatos["telefone"] = telefone
-                    dicionario_contatos["email"] = email
-                    
-                    
-                    
-            case "b":
-                def listar_contatos(contatos):
-                    if contatos <= 0:
-                        return print("nenhum contato cadastrado")
-                    for nome, telefone, email in dicionario_contatos.items():
-                        return nome, telefone, email
-                        
-                
-            case "c":
-                def buscar_contato(contatos):
-                    contato_especifico = input("digite o contato que voce deseja buscar: ")
-                    
-            case "d":
-                
-           
+        opcao = int(input("digite uma das opções: "))
+        
+        if opcao == 1:
+            adicionar_contato()
+        elif opcao == 2:
+            listar_contatos()
             
-                    
-                        
+        elif opcao == 3:
+            buscar_contatos()
+        elif opcao == 4:
+            print("obrigado por nem sequer ter tentado usar esse negocio, agradeço demais :)")
+            break
+        else:
+            print("sinto muito, mas voce digitou alguma opção errada!")
+            continue
         
+
+menu()
+        
+        
+        
+   
+            
+            
+            
+
+
+
+
+
+

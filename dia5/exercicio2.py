@@ -40,3 +40,6 @@
 # 6.  **Ver Histórico:**
 #     - Crie uma função `ver_historico(historico)`.
 #     - Imprima todas as transações registradas na lista de histórico.
+
+
+saldo = 1000
