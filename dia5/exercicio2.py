@@ -42,4 +42,4 @@
 #     - Imprima todas as transações registradas na lista de histórico.
 
 
-saldo = 1000
+#essa aqui eu não vou fazer, ja fiz na aula de poo

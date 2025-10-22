@@ -16,8 +16,21 @@
 # --- Escreva seu código e análise abaixo ---
 
 def contar_acima_da_media(numeros):
-    # Seu código aqui
-    pass
+    soma = 0
+    for numero in numeros:
+        soma += numero
+        
+    media = soma / len(numeros)
+    
+    maiores_numeros = [x for x in numeros if x > media]
+    print(media)
+    return len(maiores_numeros)
+
+numeros = [1,2,3,4,5,6,7,8,9]
+print(contar_acima_da_media(numeros))
+    
+    
+    
 
 # --- Análise de Complexidade ---
 #
@@ -36,5 +49,16 @@ def contar_acima_da_media(numeros):
 # T(n) = (c₁*n + k₁) + k₂ + (c₂*n + k₃)
 # T(n) = ...
 #
+# fazendo a contagem do custo de cada linha e depois o custo da operação de cada linha, posso chegar no seguinte quadro: CUSTO/ #OPERAÇÃO
+# 1 linha: 1c/1
+# 2 linha: 2c/n
+# 3 linha: 2c/n
+# 4 linha: 2c/1 - eu não contei o len, meu professor disse que não valia pois não está em memoria
+# 5 linha: 4c/n
+# 6 linha: 1c/1
+# 7 linha: 1c/1
+ # ai depois eu multiplico cada, posso chegar aproximadamente em um resultado equivalente a 1c + 2cn + 2cn + 2c + 4cn + 1c + 1c = 8cn + 3c
+
+
 # Notação Big O:
-# Resultado: O(...)
+# Resultado: O(n)
